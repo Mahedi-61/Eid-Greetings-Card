@@ -166,7 +166,7 @@ for i in range (1, 18):
 # time for text printing 
 myPen.penup()
 myPen.setposition(-85, -140)
-image_name = "cow.gif"
+image_name = "./images/cow.gif"
 # add the shape first then set the turtle shape
 window.addshape(os.path.join(os.path.dirname(__file__), image_name))
 myPen.shape(os.path.join(os.path.dirname(__file__), image_name))

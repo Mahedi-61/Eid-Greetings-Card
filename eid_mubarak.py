@@ -1,18 +1,18 @@
 '''@Author     : Md. Mahedi Hasan
-   @Date       : 23/07/2017
-   @Description: Eid al-Fitr 2017 card
-   @Thanks     : Eid-Mubarak-Night-Quotes-Wallpaper
+   @Written    : 23/07/2017
+   @Description: Eid ul-Azha 2018 card
+   @version    : 1.1 (19/08/2008)
 '''
 
 #import packages
 from turtle import *
 from random import randint
-import math
+import math, os, time
 
 #initialzie and setup
 myPen = Turtle()
 myPen.shape("turtle")
-myPen.speed(15)
+myPen.speed(10)
 
 window = Screen()
 window.title("Eid Mubarak !!")
@@ -45,6 +45,7 @@ def draw_star(paint, color, x, y, size):
     paint.forward(size)
   paint.end_fill()
   paint.setheading(0)
+
 
 def draw_rectangle(paint, color, x, y, width, height):
   paint.penup()
@@ -90,6 +91,7 @@ def draw_trapizium(paint, color, x, y, width, height, style):
   
   paint.end_fill()
   paint.setheading(0) 
+
 
 #draw masjid and minar
 def draw_minar(paint, color, x, y):
@@ -161,14 +163,24 @@ for i in range (1, 18):
 
 
 
-#Time for text printing 
+# time for text printing 
 myPen.penup()
+myPen.setposition(-85, -140)
+image_name = "cow.gif"
+# add the shape first then set the turtle shape
+window.addshape(os.path.join(os.path.dirname(__file__), image_name))
+myPen.shape(os.path.join(os.path.dirname(__file__), image_name))
+myPen.stamp()
+
 myPen.color("white")
-myPen.goto(-45, -180)
-myPen.write("Eid Mubarak", False, "center", ("Gabriola",36,("bold","italic")))
-myPen.goto(-270, -200)
-myPen.write("\"May the blessing of Allah fill your life with happiness and success\"", False, "left", "8pt")
-myPen.goto(-340, -280)
-myPen.write("@Developed By: Md. Mahedi Hasan", False, "left", ("0.5pt"))
-myPen.hideturtle()  
-done()
+myPen.goto(-80, -240)
+myPen.write("Eid Mubarak", False, "center", ("Gabriola",38, ("bold","italic")))
+myPen.goto(-350, -260)
+myPen.write("May the blessing of Allah fill your life with happiness and success", False, "left", "9pt")
+
+myPen.goto(-230, -320)
+myPen.write("@Presented By: Md. Mahedi Hasan", False, "left", ("0.5pt"))
+
+myPen.penup()
+myPen.goto(600, 600)
+window.exitonclick()

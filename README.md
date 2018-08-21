@@ -2,4 +2,5 @@
 
 Fun Project: A Python Turtle based Eid Card.
 
-![Eid] (./images/project_screen.png)
+<img src="./images/project_screen.png" width="800" />
+![Eid] (../master/images/project_screen.png)

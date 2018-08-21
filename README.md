@@ -2,4 +2,4 @@
 
 Fun Project: A Python Turtle based Eid Card.
 
-![Eid Mubarak to Everyone] (images/project_screen.png)
+![Eid] (./images/project_screen.png)
